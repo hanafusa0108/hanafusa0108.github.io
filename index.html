@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    <link rel="stylesheet" href="info.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('research')">Research</a></li>
+            <li><a href="#" onclick="showSection('internship')">Internship</a></li>
+            <li><a href="#" onclick="showSection('activities')">Activities</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="research" class="content">
+            <h2>Research</h2>
+            <ul id="research-list"></ul>
+        </section>
+        
+        <section id="internship" class="content">
+            <h2>Internship</h2>
+            <ul id="internship-list"></ul>
+        </section>
+        
+        <section id="activities" class="content">
+            <h2>Activities</h2>
+            <ul id="activities-list"></ul>
+        </section>
+    </main>
+
+    <script src="info.js"></script>
+</body>
+</html>
