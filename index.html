@@ -5,36 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        /* ナビゲーションバーの基本スタイル */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-start; /* ← 左寄せに変更 */
+            margin: 0;
+            padding: 0 20px; /* 左に少し余白を追加 */
+            list-style: none;
+        }
+        
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* ページ全体のトップ余白（固定ヘッダー分） */
+        body {
+            padding-top: 60px;
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        /* 他のスタイルの下に追加する */
+        ul li {
+            margin-bottom: 0.5em;
+            line-height: 1.6;
+        }
+
+        h4 {
+            margin-bottom: 0.5em;  /* デフォルトより少し狭めに */
+        }
+        
+        
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-    </header>
-    
+
+    <!-- ナビゲーションバー -->
     <nav>
         <ul>
-            <li><a href="#" onclick="showSection('research')">Research</a></li>
-            <li><a href="#" onclick="showSection('internship')">Internship</a></li>
-            <li><a href="#" onclick="showSection('activities')">Activities</a></li>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#activities">Activities</a></li>
         </ul>
     </nav>
-    
-    <main>
-        <section id="research" class="content">
-            <h2>Research</h2>
-            <ul id="research-list"></ul>
-        </section>
-        
-        <section id="internship" class="content">
-            <h2>Internship</h2>
-            <ul id="internship-list"></ul>
-        </section>
-        
-        <section id="activities" class="content">
-            <h2>Activities</h2>
-            <ul id="activities-list"></ul>
-        </section>
-    </main>
+
+    <div class="container" id="top">
+        <h3 id="profile">Profile</h3>
+
+        <!-- Profile section -->
+        <div class="profile-section">
+            <div class="d-flex align-items-start">
+                <!-- <div class="profile-image me-4">
+                    <img src="profile.jpg" alt="Profile Picture" class="img-fluid" style="max-width: 150px;">
+                </div> -->
+                <div class="profile-text">
+                    <h2>花房 健太郎（KENTARO HANAFUSA）</h2>
+            
+                    <h4>所属</h4>
+                    <p>
+                        愛媛大学大学院 理工学研究科 理工学専攻 数理情報プログラム
+                        <a href="https://sites.google.com/view/ehime-nlp/">自然言語処理研究室</a> M1
+                    </p>
+            
+                    <h4>連絡先</h4>
+                    <p>
+                        Email:
+                        <a href="mailto:hanafusa@ai.cs.ehime-u.ac.jp">hanafusa@ai.cs.ehime-u.ac.jp</a>
+                    </p>
+            
+                    <div class="social-buttons mt-2">
+                        <a href="https://github.com/hanafusa0108" target="_blank" class="btn btn-dark me-2">GitHub</a>
+                        <a href="https://twitter.com/your_x_account" target="_blank" class="btn btn-primary">X (Twitter)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>研究分野</h4>
+        <ul>
+            <li>スタイル変換</li>
+            <li>感情分析</li>
+            <li>文法誤り訂正</li>
+        </ul>
+
+        <h4>学歴</h4>
+        <ul>
+            <li>2021年4月-2025年3月 愛媛大学 工学部 工学科 人工知能研究室</li>
+            <li>2025年4月-現在 愛媛大学大学院 理工学研究科 自然言語処理研究室</li>
+        </ul>
+
+        <h3 id="research">Research</h3>
+        <h4>受賞</h4>
+        <ul>
+            <li>NLP若手の会第19回シンポジウム（YANS2024） スポンサー賞</li>
+        </ul>
+        <ul class="list-6">
+            <li class="list-group-item">
+                <strong>花房 健太郎, 柳本 大輝, 梶原 智之, 二宮 崇．</strong><br>
+                <em>大規模言語モデルによる11種類の日本語スタイル変換の性能評価．</em><br>
+                <span class="text-muted">NLP若手の会第19回シンポジウム（YANS2024）, September 2024．</span>
+            </li>
+        </ul>
+
+        <h4>国内会議</h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span>宮田 莉奈, 眞鍋 光汰, 福島 啓太, <u>花房 健太郎</u>, 高田 一慶, 梶原 智之, 桂井 麻里衣, 二宮 崇．</span><br>
+                <em>CoCoA: 情報科学分野における日本語の学会発表タイトルの分野推定データセット．</em><br>
+                <span class="text-muted">情報処理学会第87回全国大会, March 2025.</span>
+            </li>
+            <li class="list-group-item">
+                <span><u>花房 健太郎</u>, 前川 大輔, 梶原 智之．</span><br>
+                <em>大規模言語モデルによる書き手の情報を考慮した感情分析．</em><br>
+                <span class="text-muted">情報処理学会第87回全国大会, March 2025.</span>
+            </li>
+            <li class="list-group-item">
+                <span><u>花房 健太郎</u>, 柳本 大輝, 梶原 智之, 二宮 崇．</span><br>
+                <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P9-16.pdf"><em>大規模言語モデルによる日本語スタイル変換の性能評価</em></a> (<a href="https://github.com/EhimeNLP/PASTEL-JP">Data</a>)<br>
+                <span class="text-muted">言語処理学会第31回年次大会, pp.3719-3723, March 2025．</span>
+
+            </li>
+            <li class="list-group-item">
+                <span>宮田 莉奈, 眞鍋 光汰, 福島 啓太, <u>花房 健太郎</u>, 高田 一慶, 梶原 智之, 桂井 麻里衣, 二宮 崇．</span><br>
+                <em>情報科学分野における学会発表タイトルの分野推定データセットの構築．</em><br>
+                <span class="text-muted">NLP若手の会第19回シンポジウム（YANS2024）, September 2024．</span>
+            </li>
+            <li class="list-group-item">
+                <span><u>花房 健太郎</u>, 柳本 大輝, 梶原 智之, 二宮 崇．</span><br>
+                <em>大規模言語モデルによる11種類の日本語スタイル変換の性能評価．</em><br>
+                <span class="text-muted">NLP若手の会第19回シンポジウム（YANS2024）, September 2024．</span>
+            </li>
+        </ul>
+
+        <h3 id="activities">Activities</h3>
+        <h4>資格</h4>
+        <ul>
+            <li>ITパスポート</li>
+            <li>基本情報技術者試験</li>
+        </ul>
+
+        <h4>データ公開</h4>
+        <ul>
+            <li><a href="https://github.com/EhimeNLP/PASTEL-JP">PASTEL-JP</a><br>
+                人手で構築された7種類の日本語スタイル変換の評価用パラレルコーパス．
+            </li>
+        </ul>
+    </div>
 
     <script src="index.js"></script>
 </body>

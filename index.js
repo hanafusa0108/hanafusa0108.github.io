@@ -1,17 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const researchData = [
-        { title: "Paper on NLP", details: "Published at NAACL 2024" },
-        { title: "Text Style Transfer", details: "Analyzing linguistic transformations" }
-    ];
-
-    const internshipData = [
-        { title: "AI Research Intern", details: "Worked on sentiment analysis models" }
-    ];
-
-    const activitiesData = [
-        { title: "Hackathon Winner", details: "First place in AI competition" },
-        { title: "Conference Speaker", details: "Gave a talk on NLP advancements" }
-    ];
+   
 
     function populateList(id, data) {
         const list = document.getElementById(id);
